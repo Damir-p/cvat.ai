@@ -1,9 +1,16 @@
-from plot_drawer import GraphDrawer
+from drawing import PlotDrawer
 
-graph_drawer = GraphDrawer()
+def main():
+    json_file = "deviation.json"
 
-plots_paths = graph_drawer.draw_plots("json_file.json")
+    plot_drawer = PlotDrawer()
 
-print("Созданные графики:")
-for plot_path in plots_paths:
-    print(plot_path)
+    paths_to_plots = plot_drawer.draw_plots(json_file)
+
+    print("Plots created and saved successfully.")
+    print("Paths to plots:")
+    for path in paths_to_plots:
+        print(path)
+
+if __name__ == "__main__":
+    main()

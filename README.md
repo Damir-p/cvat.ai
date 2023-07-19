@@ -1,13 +1,13 @@
 git clone: 
+git clone https://github.com/Damir-p/cvat.ai.git
 
-virtualenv:
-python3 -m venv venv
+create virtualenv: python3 -m venv venv
 
 activate virtualenv:
 Linux: source venv/bin/activate
 Windows: venv\Scripts\activate
 
-requirements:
+requirements: 
 pip install -r requirements.txt
 
 download json file:
